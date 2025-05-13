@@ -14,6 +14,14 @@ class Customer {
     this.notes = notes;
   }
 
+
+  /** return full name of customer */
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+
   /** find all customers. */
 
   static async all() {
@@ -28,6 +36,12 @@ class Customer {
     );
     return results.rows.map(c => new Customer(c));
   }
+
+/** return full name of customer */
+
+fullName() {
+  return `${this.firstName} ${this.lastName}`;
+}
 
   /** get a customer by ID. */
 
